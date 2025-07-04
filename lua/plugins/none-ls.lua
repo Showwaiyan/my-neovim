@@ -19,7 +19,7 @@ return {
 				null_ls.builtins.formatting.prettierd,
 
 				-- Python
-        null_ls.builtins.formatting.black,
+				null_ls.builtins.formatting.black,
 			},
 		})
 	end,

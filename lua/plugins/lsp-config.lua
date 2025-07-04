@@ -96,6 +96,7 @@ return {
 			lspconfig.csharp_ls.setup({ capabilities = capabilities })
 			lspconfig.jsonls.setup({ capabilities = capabilities })
 			lspconfig.pylsp.setup({ capabilities = capabilities })
+			lspconfig.pylsp.setup({ capabilities = capabilities })
 
 			-- Go to definition
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
@@ -118,7 +119,21 @@ return {
 				vim.lsp.buf.format({ async = true })
 			end, {})
 
-			-- Diagnostic
+			-- Diagnostic signs and config
+			local signs = {
+				Error = " ",
+				Warn = " ",
+				Hint = " ",
+				Info = " ",
+			}
+			for type, icon in pairs(signs) do
+				local hl = "DiagnosticSign" .. type
+				vim.fn.sign_define(hl, {
+					text = icon,
+					texthl = hl,
+					numhl = "", -- No number highlight
+				})
+			end
 			-- Auto-show floating diagnostic on hover
 			vim.cmd([[autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })]])
 
