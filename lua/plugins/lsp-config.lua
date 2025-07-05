@@ -119,21 +119,9 @@ return {
 				vim.lsp.buf.format({ async = true })
 			end, {})
 
-			-- Diagnostic signs and config
-			local signs = {
-				Error = " ",
-				Warn = " ",
-				Hint = " ",
-				Info = " ",
-			}
-			for type, icon in pairs(signs) do
-				local hl = "DiagnosticSign" .. type
-				vim.fn.sign_define(hl, {
-					text = icon,
-					texthl = hl,
-					numhl = "", -- No number highlight
-				})
-			end
+			-- Auto-show floating diagnostic on hover
+			vim.cmd([[autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })]])
+
 			-- Auto-show floating diagnostic on hover
 			vim.cmd([[autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })]])
 
@@ -147,7 +135,20 @@ return {
 					wrap = true,
 				},
 				severity_sort = true,
-				signs = true,
+				signs = {
+					text = {
+						[vim.diagnostic.severity.ERROR] = " ",
+						[vim.diagnostic.severity.WARN] = " ",
+						[vim.diagnostic.severity.INFO] = "󰋼 ",
+						[vim.diagnostic.severity.HINT] = "󰌵 ",
+					},
+					numhl = {
+						[vim.diagnostic.severity.ERROR] = "",
+						[vim.diagnostic.severity.WARN] = "",
+						[vim.diagnostic.severity.HINT] = "",
+						[vim.diagnostic.severity.INFO] = "",
+					},
+				},
 				underline = true,
 				update_in_insert = false,
 			})
