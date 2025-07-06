@@ -59,9 +59,9 @@ return {
 		vim.keymap.set("n", "<Leader>dc", function()
 			dap.continue()
 		end)
-		vim.keymap.set("n", "<F10>", dap.step_over, { desc = "DAP step over" })
-		vim.keymap.set("n", "<F11>", dap.step_into, { desc = "DAP step into" })
-		vim.keymap.set("n", "<F12>", dap.step_out, { desc = "DAP step out" })
+		vim.keymap.set("n", "<Leader>dov", dap.step_over, { desc = "DAP step over" })
+		vim.keymap.set("n", "<Leader>din", dap.step_into, { desc = "DAP step into" })
+		vim.keymap.set("n", "<Leader>dou", dap.step_out, { desc = "DAP step out" })
 
 		-- DAP signs
 		vim.fn.sign_define("DapBreakpoint", { text = "🟥", texthl = "DiagnosticError" })
