@@ -16,7 +16,9 @@ return {
 				null_ls.builtins.formatting.csharpier,
 
 				-- JavaScript
-				null_ls.builtins.formatting.prettierd,
+				null_ls.builtins.formatting.prettierd.with({
+					prefer_local = "node_modules/.bin",
+				}),
 
 				-- Python
 				null_ls.builtins.formatting.black,
