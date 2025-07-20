@@ -53,7 +53,7 @@ return {
 			signature.setup(opts)
 
 			-- Optional: map a key to trigger signature help manually
-			vim.keymap.set("i", "<C-k>", function()
+			vim.keymap.set("i", "<C-o>", function()
 				signature.toggle_float_win()
 			end, { desc = "LSP Signature Help" })
 		end,
