@@ -31,29 +31,7 @@ return {
 			signature.setup(opts)
 
 			-- Optional: map a key to trigger signature help manually
-			vim.keymap.set("i", "<C-h>", function()
-				signature.toggle_float_win()
-			end, { desc = "LSP Signature Help" })
-		end,
-	},
-	{
-		-- Trigger signature popup manually
-		"ray-x/lsp_signature.nvim",
-		event = "VeryLazy",
-		opts = {
-			bind = true,
-			handler_opts = {
-				border = "rounded",
-			},
-			hint_enable = false, -- disable virtual text hint
-			floating_window = false, -- don't show popup automatically
-		},
-		config = function(_, opts)
-			local signature = require("lsp_signature")
-			signature.setup(opts)
-
-			-- Optional: map a key to trigger signature help manually
-			vim.keymap.set("i", "<C-o>", function()
+			vim.keymap.set("i", "<C-s>", function()
 				signature.toggle_float_win()
 			end, { desc = "LSP Signature Help" })
 		end,
