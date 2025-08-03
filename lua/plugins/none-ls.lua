@@ -1,28 +1,31 @@
 return {
-	"nvimtools/none-ls.nvim",
-	dependencies = {
-		"nvimtools/none-ls-extras.nvim",
-	},
-	config = function()
-		local null_ls = require("null-ls")
+  "nvimtools/none-ls.nvim",
+  dependencies = {
+    "nvimtools/none-ls-extras.nvim",
+  },
+  config = function()
+    local null_ls = require("null-ls")
 
-		null_ls.setup({
-			sources = {
+    local eslint_d = require("none-ls.diagnostics.eslint_d")
+    null_ls.setup({
+      sources = {
+        -- lua
+        null_ls.builtins.formatting.stylua,
 
-				-- lua
-				null_ls.builtins.formatting.stylua,
+        -- C#
+        null_ls.builtins.formatting.csharpier,
 
-				-- C#
-				null_ls.builtins.formatting.csharpier,
+        -- JavaScript
+        null_ls.builtins.formatting.prettierd.with({
+          prefer_local = "node_modules/.bin",
+        }),
+        eslint_d.with({
+          diagnostics_format = "[eslint] #{m}\n(#{c})",
+        }),
 
-				-- JavaScript
-				null_ls.builtins.formatting.prettierd.with({
-					prefer_local = "node_modules/.bin",
-				}),
-
-				-- Python
-				null_ls.builtins.formatting.black,
-			},
-		})
-	end,
+        -- Python
+        null_ls.builtins.formatting.black,
+      },
+    })
+  end,
 }
