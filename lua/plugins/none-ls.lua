@@ -18,10 +18,10 @@ return {
 				null_ls.builtins.formatting.prettierd.with({
 					prefer_local = "node_modules/.bin",
 				}),
-				require("none-ls.diagnostics.eslint").with({
-					diagnostics_format = "[eslint] #{m}\n(#{c})",
-					prefer_local = "node_modules/.bin",
-				}),
+				-- require("none-ls.diagnostics.eslint").with({
+				-- 	diagnostics_format = "[eslint] #{m}\n(#{c})",
+				-- 	prefer_local = "node_modules/.bin",
+				-- }),
 
 				-- Python
 				null_ls.builtins.formatting.black,
