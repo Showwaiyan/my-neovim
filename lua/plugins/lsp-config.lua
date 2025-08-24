@@ -75,6 +75,19 @@ return {
 			lspconfig.jsonls.setup({ capabilities = capabilities })
 			lspconfig.pylsp.setup({ capabilities = capabilities })
 			lspconfig.pylsp.setup({ capabilities = capabilities })
+			lspconfig.eslint.setup({
+				settings = {
+					-- Example: auto-fix on save
+					format = { enable = true },
+				},
+				on_attach = function(client, bufnr)
+					-- optional: run ESLint fix on save
+					-- 	vim.api.nvim_create_autocmd("BufWritePre", {
+					-- 		buffer = bufnr,
+					-- 		command = "EslintFixAll",
+					-- 	})
+				end,
+			})
 
 			-- Go to definition
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
