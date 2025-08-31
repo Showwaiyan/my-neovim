@@ -11,6 +11,7 @@ A modern, modular Neovim setup using Lazy.nvim plugin manager with a focus on de
 - **Terminal Integration** - Floating terminal and tmux navigation
 - **Discord Rich Presence** - Show your coding activity on Discord
 - **AI Assistant** - GitHub Copilot integration with chat interface
+- **Remote Development** - Remote-neovim plugin for remote mechine development
 
 ## 📋 Requirements
 
@@ -74,6 +75,7 @@ A modern, modular Neovim setup using Lazy.nvim plugin manager with a focus on de
 - **[Copilot](https://github.com/github/copilot.vim)** - AI pair programming
 - **[CopilotChat](https://github.com/CopilotC-Nvim/CopilotChat.nvim)** - AI chat interface
 - **[web-tools](https://github.com/ray-x/web-tools.nvim)** - Web development utilities
+- **[remote-nvim](https://github.com/amitds1997/remote-nvim.nvim.git)** - Remote mechine development
 
 ### Terminal & Navigation
 - **[neaterm](https://github.com/Dan7h3x/neaterm.nvim)** - Floating terminal
