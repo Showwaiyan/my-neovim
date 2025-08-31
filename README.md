@@ -79,6 +79,7 @@ A modern, modular Neovim setup using Lazy.nvim plugin manager with a focus on de
 
 ### Terminal & Navigation
 - **[neaterm](https://github.com/Dan7h3x/neaterm.nvim)** - Floating terminal
+- **[Fine Command Line](https://github.com/VonHeikemen/fine-cmdline.nvim.git)** - Floating vim Command mode
 - **[vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)** - Seamless tmux navigation
 - **[nvim-window](https://github.com/yorickpeterse/nvim-window)** - Window picker
 
