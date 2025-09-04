@@ -14,15 +14,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	end
 end
 
--- General settings
-vim.opt.relativenumber = true -- Enable relative line numbers
-vim.opt.number = true -- Show the absolute line number on the current line
-vim.opt.tabstop = 2 -- 2 spaces for tabs
-vim.opt.shiftwidth = 2 -- 2 spaces for indent
-vim.opt.expandtab = true -- Use spaces instead of tabs
-vim.opt.smartindent = true -- Smart indenting
-vim.opt.termguicolors = true -- Enable true colors
-vim.opt.clipboard = "unnamedplus" -- Sync with system clipboard
+
 
 -- Setup lazy.nvim
 vim.opt.rtp:prepend(lazypath)
