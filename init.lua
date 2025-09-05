@@ -14,6 +14,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	end
 end
 
+
 -- Setup lazy.nvim
 vim.opt.rtp:prepend(lazypath)
 require("vim-options")

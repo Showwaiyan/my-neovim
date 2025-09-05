@@ -6,8 +6,6 @@ vim.cmd("set shiftwidth=2")
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-vim.keymap.set("i", "jj", "<Esc>")
-
 -- General settings
 vim.opt.relativenumber = true -- Enable relative line numbers
 vim.opt.number = true -- Show the absolute line number on the current line
