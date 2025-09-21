@@ -62,20 +62,19 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({ capabilities = capabilities })
-      lspconfig.ts_ls.setup({ capabilities = capabilities })
-      lspconfig.html.setup({ capabilities = capabilities })
-      lspconfig.cssls.setup({ capabilities = capabilities })
-      lspconfig.emmet_ls.setup({
+      -- local lspconfig = require("lspconfig")
+      vim.lsp.config.lua_ls = { capabilities = capabilities }
+      vim.lsp.config.ts_ls = { capabilities = capabilities }
+      vim.lsp.config.html = { capabilities = capabilities }
+      vim.lsp.config.cssls = { capabilities = capabilities }
+      vim.lsp.config.emmet_ls = {
         capabilities = capabilities,
         filetypes = { "html", "css", "scss", "javascriptreact", "typescriptreact" },
-      })
-      lspconfig.csharp_ls.setup({ capabilities = capabilities })
-      lspconfig.jsonls.setup({ capabilities = capabilities })
-      lspconfig.pylsp.setup({ capabilities = capabilities })
-      lspconfig.pylsp.setup({ capabilities = capabilities })
-      lspconfig.eslint.setup({
+      }
+      vim.lsp.config.csharp_ls = { capabilities = capabilities }
+      vim.lsp.config.jsonls = { capabilities = capabilities }
+      vim.lsp.config.pylsp = { capabilities = capabilities }
+      vim.lsp.config.eslint = {
         filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
         settings = {
           -- Example: auto-fix on save
@@ -88,7 +87,7 @@ return {
           -- 		command = "EslintFixAll",
           -- 	})
         end,
-      })
+      }
 
       -- Go to definition
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
