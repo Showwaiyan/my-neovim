@@ -1,6 +1,3 @@
-local utils = require("remote-nvim.utils")
-local constants = require("remote-nvim.constants")
-
 return {
 	"amitds1997/remote-nvim.nvim",
 	version = "*", -- Pin to GitHub releases
