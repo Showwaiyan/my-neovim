@@ -47,6 +47,7 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",
+          "stylua",
           "html",
           "cssls",
           "ts_ls",
@@ -54,6 +55,7 @@ return {
           "csharp_ls",
           "jsonls",
           "pylsp",
+          "jdtls",
         },
       })
     end,
@@ -88,6 +90,7 @@ return {
           -- 	})
         end,
       }
+      vim.lsp.config.jdtls = { capabilities = capabilities }
 
       -- Go to definition
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
