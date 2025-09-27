@@ -46,6 +46,7 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
+          -- "black",
 					"lua_ls",
 					"stylua",
 					"html",
@@ -55,7 +56,14 @@ return {
 					"csharp_ls",
 					"jsonls",
 					"pylsp",
+          -- "debugpy",
 					"jdtls",
+          "docker_compose_language_service",
+          "dockerls",
+          "eslint",
+          -- "js-debug-adapter",
+          -- "prettierd",
+          -- "pug-lsp",
 				},
 			})
 		end,
