@@ -55,7 +55,7 @@ return {
 					"csharp_ls",
 					"jsonls",
 					"pylsp",
-          "jdtls",
+					"jdtls",
 				},
 			})
 		end,
@@ -89,7 +89,6 @@ return {
 					-- 	})
 				end,
 			}
-			-- vim.lsp.enable("jdtls")
 
 			-- Go to definition
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})

@@ -60,6 +60,27 @@ local config = {
 	init_options = {
 		bundles = {},
 	},
+
+on_attach = function(client, bufnr)
+		print("JDTLS attached with client ID: " .. client.id)
+
+		-- Wait a moment then stop any other jdtls clients
+		vim.defer_fn(function()
+			local clients = vim.lsp.get_active_clients({ name = "jdtls" })
+			for _, other_client in pairs(clients) do
+				-- Stop clients that are not this one and have different characteristics
+				if other_client.id ~= client.id and
+				   (not other_client.config.root_dir or
+				    (other_client.config.settings and
+				     other_client.config.settings.java and
+				     vim.tbl_isempty(other_client.config.settings.java))) then
+					print("Stopping unwanted JDTLS client ID: " .. other_client.id)
+					other_client.stop()
+				end
+			end
+		end, 1000) -- Wait 1 second after attach
+	end,
+
 }
 require("jdtls").start_or_attach(config)
 
