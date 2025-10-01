@@ -10,7 +10,7 @@ A modern, modular Neovim setup using Lazy.nvim plugin manager with a focus on de
 - **Debugging** - Built-in DAP support for multiple programming languages
 - **Terminal Integration** - Floating terminal and tmux navigation
 - **Discord Rich Presence** - Show your coding activity on Discord
-- **AI Assistant** - GitHub Copilot integration with chat interface
+- **AI Assistant** - AI integration with chat interface
 - **Remote Development** - Remote-neovim plugin for remote mechine development
 
 ## 📋 Requirements
@@ -76,6 +76,7 @@ A modern, modular Neovim setup using Lazy.nvim plugin manager with a focus on de
 - **[CopilotChat](https://github.com/CopilotC-Nvim/CopilotChat.nvim)** - AI chat interface
 - **[web-tools](https://github.com/ray-x/web-tools.nvim)** - Web development utilities
 - **[remote-nvim](https://github.com/amitds1997/remote-nvim.nvim.git)** - Remote mechine development
+- **[endpointnvim](https://github.com/zerochae/endpoint.nvim.git)** - Route finder
 
 ### Terminal & Navigation
 - **[neaterm](https://github.com/Dan7h3x/neaterm.nvim)** - Floating terminal
@@ -95,6 +96,7 @@ A modern, modular Neovim setup using Lazy.nvim plugin manager with a focus on de
 - `gd` - Go to definition
 - `gD` - Go to declaration
 - `K` - Hover documentation
+- `C-s` - Show Signature
 - `gi` - Go to implementation
 - `<leader>rn` - Rename symbol
 - `<leader>ca` - Code actions
@@ -104,6 +106,12 @@ A modern, modular Neovim setup using Lazy.nvim plugin manager with a focus on de
 ### Git
 - `<leader>gp` - Preview hunk
 - `<leader>gt` - Toggle line blame
+- `co` — choose ours
+- `ct` — choose theirs
+- `cb` — choose both
+- `c0` — choose none
+- `]x` — move to previous conflict
+- `[x` — move to next conflict
 
 ### Debugging
 - `<leader>dt` - Toggle breakpoint
