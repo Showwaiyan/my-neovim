@@ -76,7 +76,7 @@ A modern, modular Neovim setup using Lazy.nvim plugin manager with a focus on de
 - **[CopilotChat](https://github.com/CopilotC-Nvim/CopilotChat.nvim)** - AI chat interface
 - **[web-tools](https://github.com/ray-x/web-tools.nvim)** - Web development utilities
 - **[remote-nvim](https://github.com/amitds1997/remote-nvim.nvim.git)** - Remote mechine development
-- **[endpointnvim](https://github.com/zerochae/endpoint.nvim.git)** - Route finder
+- **[endpoint-nvim](https://github.com/zerochae/endpoint.nvim.git)** - Route finder
 
 ### Terminal & Navigation
 - **[neaterm](https://github.com/Dan7h3x/neaterm.nvim)** - Floating terminal
