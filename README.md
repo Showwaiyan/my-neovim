@@ -77,6 +77,7 @@ A modern, modular Neovim setup using Lazy.nvim plugin manager with a focus on de
 - **[web-tools](https://github.com/ray-x/web-tools.nvim)** - Web development utilities
 - **[remote-nvim](https://github.com/amitds1997/remote-nvim.nvim.git)** - Remote mechine development
 - **[endpoint-nvim](https://github.com/zerochae/endpoint.nvim.git)** - Route finder
+- **[markview-nvim](https://github.com/OXY2DEV/markview.nvim.git)** - Markview Render inside Nvim
 
 ### Terminal & Navigation
 - **[neaterm](https://github.com/Dan7h3x/neaterm.nvim)** - Floating terminal
