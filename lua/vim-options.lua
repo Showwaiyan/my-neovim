@@ -15,3 +15,6 @@ vim.opt.expandtab = true -- Use spaces instead of tabs
 vim.opt.smartindent = true -- Smart indenting
 vim.opt.termguicolors = true -- Enable true colors
 vim.opt.clipboard = "unnamedplus" -- Sync with system clipboard
+
+-- serarch highligh off
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { silent = true })
