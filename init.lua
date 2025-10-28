@@ -24,6 +24,8 @@ require("lazy").setup("plugins", {
 })
 vim.api.nvim_set_keymap('n', '<leader>p', ':lua require("utils").bootstrap_project()<CR>', { noremap = true, silent = true })
 
+vim.notify = require("notify")
+
 -- Disable auto-commenting on newline
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "*",
