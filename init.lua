@@ -22,6 +22,7 @@ require("lazy").setup("plugins", {
 	install = { colorscheme = { "habamax" } },
 	checker = { enabled = true },
 })
+vim.api.nvim_set_keymap('n', '<leader>p', ':lua require("utils").bootstrap_project()<CR>', { noremap = true, silent = true })
 
 -- Disable auto-commenting on newline
 vim.api.nvim_create_autocmd("FileType", {
