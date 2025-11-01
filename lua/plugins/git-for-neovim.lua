@@ -45,9 +45,9 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require("diffview").setup()
-      vim.keymap.set("n", "<leader>do", "<cmd>DiffviewOpen<CR>", { desc = "[D]iffview [O]pen" })
-      vim.keymap.set("n", "<leader>df", "<cmd>DiffviewFocusFiles<CR>", { desc = "[D]iffview [F]ocus Files" })
-      vim.keymap.set("n", "<leader>dc", "<cmd>DiffviewClose<CR>", { desc = "[D]iffview [C]lose" })
+      vim.keymap.set("n", "<leader>go", "<cmd>DiffviewOpen<CR>", { desc = "[D]iffview [O]pen" })
+      vim.keymap.set("n", "<leader>gf", "<cmd>DiffviewFocusFiles<CR>", { desc = "[D]iffview [F]ocus Files" })
+      vim.keymap.set("n", "<leader>gc", "<cmd>DiffviewClose<CR>", { desc = "[D]iffview [C]lose" })
     end,
   },
 }
