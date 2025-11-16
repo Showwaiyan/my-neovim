@@ -46,7 +46,7 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
-          -- "black",
+					-- "black",
 					"lua_ls",
 					"stylua",
 					"html",
@@ -56,14 +56,14 @@ return {
 					"csharp_ls",
 					"jsonls",
 					"pylsp",
-          -- "debugpy",
+					-- "debugpy",
 					"jdtls",
-          "docker_compose_language_service",
-          "dockerls",
-          "eslint",
-          -- "js-debug-adapter",
-          -- "prettierd",
-          -- "pug-lsp",
+					"docker_compose_language_service",
+					"dockerls",
+					"eslint",
+					-- "js-debug-adapter",
+					-- "prettierd",
+					-- "pug-lsp",
 				},
 			})
 		end,
@@ -73,7 +73,19 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			vim.lsp.config.lua_ls = { capabilities = capabilities }
-			vim.lsp.config.ts_ls = { capabilities = capabilities }
+			vim.lsp.config.ts_ls = {
+				capabilities = capabilities,
+				cmd = { "typescript-language-server", "--stdio" },
+				root_dir = vim.fs.root(0, {
+					"package.json",
+					"tsconfig.json",
+					"jsconfig.json",
+					".git",
+				}),
+				filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+			}
+
+			vim.lsp.enable("ts_ls")
 			vim.lsp.config.html = { capabilities = capabilities }
 			vim.lsp.config.cssls = { capabilities = capabilities }
 			vim.lsp.config.emmet_ls = {
