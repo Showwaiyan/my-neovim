@@ -61,6 +61,7 @@ return {
 					"docker_compose_language_service",
 					"dockerls",
 					"eslint",
+          "clangd",
 					-- "js-debug-adapter",
 					-- "prettierd",
 					-- "pug-lsp",
@@ -93,6 +94,7 @@ return {
 				filetypes = { "html", "css", "scss", "javascriptreact", "typescriptreact" },
 			}
 			vim.lsp.config.csharp_ls = { capabilities = capabilities }
+      vim.lsp.config.clangd = {capabilities = capabilities}
 			vim.lsp.config.jsonls = { capabilities = capabilities }
 			vim.lsp.config.pylsp = { capabilities = capabilities }
 			vim.lsp.config.eslint = {
