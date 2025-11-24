@@ -2,6 +2,12 @@ return {
 	{ "mfussenegger/nvim-jdtls" },
 	{
 		"elmcgill/springboot-nvim",
+		ft = "java",
+		cond = function()
+			return vim.fn.filereadable("pom.xml") == 1
+				or vim.fn.filereadable("build.gradle") == 1
+				or vim.fn.filereadable("build.gradle.kts") == 1
+		end,
 		dependencies = {
 			"neovim/nvim-lspconfig",
 			"mfussenegger/nvim-jdtls",
