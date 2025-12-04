@@ -93,7 +93,7 @@ return {
 				capabilities = capabilities,
 				filetypes = { "html", "css", "scss", "javascriptreact", "typescriptreact" },
 			}
-      vim.lsp.config.clangd = { capabilities = capabilities }
+			vim.lsp.config.clangd = { capabilities = capabilities }
 			vim.lsp.config.csharp_ls = { capabilities = capabilities }
 			vim.lsp.config.jsonls = { capabilities = capabilities }
 			vim.lsp.config.pylsp = { capabilities = capabilities }
