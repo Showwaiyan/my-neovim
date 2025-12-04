@@ -88,13 +88,14 @@ return {
 
 			vim.lsp.enable("ts_ls")
 			vim.lsp.config.html = { capabilities = capabilities }
-			vim.lsp.config.cssls = { capabilities = capabilities }
+      vim.lsp.config.cssls = { capabilities = capabilities }
 			vim.lsp.config.emmet_ls = {
 				capabilities = capabilities,
 				filetypes = { "html", "css", "scss", "javascriptreact", "typescriptreact" },
 			}
 			vim.lsp.config.csharp_ls = { capabilities = capabilities }
       vim.lsp.config.clangd = {capabilities = capabilities}
+      vim.lsp.config.ccls = {capabilities = capabilities}
 			vim.lsp.config.jsonls = { capabilities = capabilities }
 			vim.lsp.config.pylsp = { capabilities = capabilities }
 			vim.lsp.config.eslint = {
@@ -132,9 +133,6 @@ return {
 			vim.keymap.set("n", "<leader>f", function()
 				vim.lsp.buf.format({ async = true })
 			end, {})
-
-			-- Auto-show floating diagnostic on hover
-			vim.cmd([[autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })]])
 
 			-- Auto-show floating diagnostic on hover
 			vim.cmd([[autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })]])
