@@ -9,6 +9,7 @@ A modern, modular Neovim setup using Lazy.nvim plugin manager with a focus on de
 - **Git Integration** - Comprehensive git workflow with conflict resolution
 - **Debugging** - Built-in DAP support for multiple programming languages
 - **Terminal Integration** - Floating terminal and tmux navigation
+- **AI Coding Assistant** - OpenCode integration for AI-powered coding help
 - **Discord Rich Presence** - Show your coding activity on Discord
 - **Remote Development** - Remote-neovim plugin for remote machine development
 - **Project Bootstrapping** - Quick project setup for multiple frameworks
@@ -112,6 +113,7 @@ The bootstrapper automatically:
   - Python (debugpy)
   - C/C++/Rust (codelldb)
 - **[nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)** - UI for nvim-dap
+- **[opencode.nvim](https://github.com/NickvanDyke/opencode.nvim)** - AI-powered coding assistant integration
 - **[web-tools](https://github.com/ray-x/web-tools.nvim)** - Web development utilities
 - **[remote-nvim](https://github.com/amitds1997/remote-nvim.nvim)** - Remote machine development
 - **[endpoint-nvim](https://github.com/zerochae/endpoint.nvim)** - API route finder
@@ -215,6 +217,14 @@ The bootstrapper automatically:
 - `R` - Treesitter search (operator-pending, visual)
 - `<C-s>` (command mode) - Toggle flash search
 - `<leader>w` - Pick window (quick window switcher)
+
+### OpenCode (AI Assistant)
+- `<leader>oa` - Ask OpenCode with `@this:` context
+- `<leader>os` - Select OpenCode action
+- `<leader>op` - Add current context to OpenCode prompt
+- `<leader>ot` - Toggle OpenCode terminal (works in normal and terminal mode)
+- `<leader>ou` - Scroll OpenCode session half page up
+- `<leader>od` - Scroll OpenCode session half page down
 
 ### API Development
 - `:Endpoint` - Find and navigate to API routes in your project
