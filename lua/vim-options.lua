@@ -18,4 +18,3 @@ vim.opt.clipboard = "unnamedplus" -- Sync with system clipboard
 
 -- serarch highligh off
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { silent = true })
-vim.keymap.set("i", "jk", "<Esc>")
